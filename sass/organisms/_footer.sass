@@ -1,0 +1,39 @@
+footer
+	.box-color
+		+gradient(90deg, $azul, $roxo) 
+	.contato-rodape
+		text-align: center
+		margin-bottom: 15px
+		margin-top: 15px
+		i 
+			color: $branco
+			margin-right: 50px
+			a 
+				color: $branco
+				font-family: 'dosis'
+		+breakpoint($celubot)
+			i 
+				margin-right: 20px
+				white-space: pre		
+	.logo-rodape
+		+make-sm-column(6)
+		+breakpoint($celubot)
+			img
+				+img-responsive
+				margin: 0 auto 
+	.facebook			
+		+make-sm-column(6)
+		margin-top: 30px
+		margin-bottom: 30px
+		+breakpoint($celubot)
+			text-align: center
+
+	.direitos
+		+gradient(90deg, $azul, $roxo) 
+		text-align: center	
+		h2 
+			padding-top: 10px
+			padding-bottom: 10px
+			color: $branco
+			span 
+				font-weight: bold

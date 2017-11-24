@@ -1,0 +1,32 @@
+header
+	.topo
+		+flexbox
+		+align-items(center)
+		+justify-content(space-between)
+		+breakpoint($celubot)
+			display: block
+		.logo
+			+flexbox
+			+align-items(center)
+			+breakpoint($celubot)
+				display: block
+				img
+					+img-responsive
+					margin: 0 auto
+		.contato-topo
+			.fa-whatsapp
+				color: $whats
+			.fa-phone,
+			.fa-map-marker
+				color: $azul	
+			+breakpoint($celubot)
+				text-align: center
+				margin-bottom: 30px	
+			i 
+				font-size: 25px
+				margin-right: 15px
+				a 
+					font-size: 15px	
+					font-family: 'dosis'
+					color: $roxo
+					font-weight: 500

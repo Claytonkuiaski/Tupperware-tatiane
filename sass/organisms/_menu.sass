@@ -1,0 +1,117 @@
+.nav
+	+gradient(0deg, $azul, $roxo) 
+
+.menu
+	position: relative	
+	z-index: 9
+	margin-top: 0px 
+	width: auto
+	+breakpoint($tablet)
+		display: none
+	ul 
+		li 
+			list-style: none
+			float: left
+			padding-top: 18px
+			padding-bottom: 15px
+			+gradient(0deg, $azul, $roxo) 
+			&:hover 
+				+gradient(0deg, $roxo, $azul) 
+				.sub-menu 
+					display: block 
+					
+			a
+				text-transform: uppercase 
+				cursor: pointer
+				font-size: 15px 
+				font-weight: bold
+				padding-left: 12px
+				padding-right: 12px
+				color: $branco
+				+transition(.2s)
+				&:hover
+					color: $branco
+			.sub-menu
+				display: none
+				position: absolute
+				margin-top: 12px
+				padding-bottom: 0px
+				width: 200px
+				li 
+					margin-top: 0px
+					padding: 0
+					margin-bottom: 0px
+					float: none
+					border-top: none
+					border-bottom: solid 1px $azul
+					+gradient(90deg, $roxo, $azul) 
+					&:hover
+						+gradient(90deg, $azul, $roxo) 
+				a 
+					text-transform: none
+					color: $branco
+					display: block
+					font-weight: 300
+					padding-top: 10px
+					padding-bottom: 10px
+
+.toggle
+	display: none
+	float: right
+	i
+		font-size: 50px
+		color: $roxo
+		padding: 5px 10px
+		+transition(.2s)
+		&:hover 
+			color: $azul
+	+breakpoint($tablet)
+		display: block
+	+breakpoint($celubot)
+		margin-right: 0
+		padding-left: 10px
+
+
+.menu-responsivo
+	position: fixed
+	width: 250px
+	height: 100%
+	left: -350px 
+	top: 0
+	z-index: 9999
+	+gradient(0deg, $azul, $roxo)
+	+transition(.2s)
+	&.ativo
+		left: 0px
+	ul 
+		list-style: none
+		li 
+			
+			a
+				cursor: pointer
+				padding: 7px
+				display: block
+				color: $branco
+				&:hover
+					+transition(.1s)
+					text-decoration: none
+					+gradient(90deg, $roxo, $azul)
+
+	.sub-menu-responsivo
+		display: none
+		position: relative
+		margin-top: 0
+		padding-bottom: 0px
+		background-color: $azul
+		margin-left: 0 
+		
+		li 
+			margin-top: 0px
+			margin-bottom: 0px
+			float: none
+			&:hover
+				+gradient(90deg, $azul, $roxo)
+		a 
+			color: $branco
+			display: block	
+			text-indent: 20px		
